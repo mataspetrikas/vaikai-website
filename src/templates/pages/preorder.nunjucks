@@ -24,7 +24,7 @@
         <div class="split-body">
           <div class="milestone centrum centrum--left">
             <h3>Avakai twins:<br>
-            Less screentime, more play<br>
+            Less screen time, more play<br>
             <span class="strikethrough" title="it's approximately 140€">$150</span> <span class="bluetext" title="it's approximately 129€">$139</span></h3>
             <p>Avakai are crafted wooden toy twins that enable kids to discover free play and a connected world without screens. Be part of our first production and get a $11 discount.</p>
             <p>
@@ -101,7 +101,17 @@
               </li>
 
 
-              <li><a href="https://www.facebook.com/vaikaiplay/videos/945601982175720/?theater" title="See waving interaction"  target="_blank">Waving: Excited</a></li>
+              <li>
+
+                  {{ ctrl.link({
+                    type: 'link',
+                    url: 'https://vimeo.com/152263409',
+                    target: 'features-video-5:popup',
+                    action: 'open',
+                    label: 'Waving: Excited'
+                  }, '', popup_condition) }}             
+
+              </li>
 
               <li>
                   {{ ctrl.link({
@@ -135,7 +145,16 @@
 
             <h4>Games to play</h4>
             <ul>
-              <li><a href="https://www.facebook.com/vaikaiplay/videos/942541485815103/?theater" target="_blank">Treasure Hunt</a></li>
+              <li>
+                {{ ctrl.link({
+                        type: 'link',
+                        url: 'https://vimeo.com/152263405',
+                        target: 'features-video-6:popup',
+                        action: 'open',
+                        label: 'Treasure Hunt'
+                      }, '', popup_condition) }}
+
+              </li>
               <li>Catch</li>
               <li>Princess and Monster</li>
               <li>Sardines</li>
@@ -232,6 +251,26 @@
       }, 'js-objfit', popup_condition) }}
 
   {% endcall %}
+
+  {% call pop.base({
+      name: 'features-video-5'
+    }, '') %}
+
+      {{ vid.vimeo({
+        id: 152263409
+      }, 'js-objfit', popup_condition) }}
+
+  {% endcall %}
+  {% call pop.base({
+      name: 'features-video-6'
+    }, '') %}
+
+      {{ vid.vimeo({
+        id: 152263405
+      }, 'js-objfit', popup_condition) }}
+
+  {% endcall %}
+  
 
   {{ super() }}
 

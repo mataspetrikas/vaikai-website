@@ -14,6 +14,8 @@
     <meta name="web-author" content="{{ settings.site.webAuthor }}" />
     <link rel="canonical" href="{{ page.url }}" />
 
+
+
     <!-- =Scripts-preload -->
     {% block head_scripts %}
       <script src="{{ 'js/vendor/modernizr.js' }}"></script>
@@ -59,6 +61,8 @@
     <!-- =Icons-->
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
     <!-- Place favicon.ico in the root directory -->
+
+    <link rel="icon" href="favicon_22042015.ico">
 
     <!-- =Third-party-meta -->
     {% block third_party_meta %}
