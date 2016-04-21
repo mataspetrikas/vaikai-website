@@ -4,9 +4,6 @@
 {% import 'macros/popup.nunjucks' as pop %}
 {% import 'macros/video.nunjucks' as vid %}
 
-{% import 'macros/form.nunjucks' as frm %}
-{% import 'macros/symbol.nunjucks' as sym %}
-
 {% set popup_condition = {
   'data-media': '(min-width: 700px)'
 } %}
@@ -27,9 +24,9 @@
         <div class="split-body">
           <div class="milestone centrum centrum--left">
             <h3>Avakai twins:<br>
-            Less screen time, more play<br>
-            <span class="strikethrough" title="it's approximately $150">€140</span> <span class="bluetext" title="it's approximately $139">€129</span></h3>
-            <p>Avakai are crafted wooden toy twins that enable kids to discover free play and a connected world without screens. Be part of our first production and get a €10 discount.</p>
+            Messaging like play.<br>
+            <span class="strikethrough" title="it's approximately 140€">$150</span> <span class="bluetext" title="it's approximately 129€">$139</span></h3>
+            <p>Avakai are smart wooden toys with an Internet connection. Think of them as your favorite messenger app, built into a cute wooden toy. Tell your dear ones you love them, from anywhere and anytime, no screens required. Help us make the first production round and get a $11 discount.</p>
             <p>
               <select class="js-select">
                 {% for item in page.units %}
@@ -38,36 +35,17 @@
               </select>
             </p>
 
-            
-            <p><em>We are producing the first limited batch of Avakai right now - and all the units have been already reserved. We'll start the mass production later this year, so please leave us your email below and you'll be the first to know when the Twins are available again!</em></p>
+            <p>
 
+              {% for item in page.units %}
+                <button type="button" class="btn {{ 'hide' if loop.index0 != 0 }}" data-celery="{{ item.celery_id }}" data-celery-version="v2" data-celery-sku="{{ item.sku }}" data-celery-prefill-coupon="" data-celery-autoadd data-vaikai-option="{{ item.name }}">Add to cart</button>
+              {% endfor %}
 
+            </p>
 
-
-          {% call frm.mailchimp(page.form) %}
-
-            <div class="form-group">
-              <div class="form-field field field--email">
-                <div class="input-group">
-                  <label for="input-email" class="sr-only">Email address</label>
-                  <input id="input-email" name="EMAIL" class="field-control input input--email" type="email" placeholder="Enter your email" />
-                  <button class="input-btn icon-btn" type="submit">
-                    {{ sym.icon("send", "Yes, sign me up!") }}
-                  </button>
-                </div>
-              </div>
-            </div>
-
-
-          {% endcall %}
-
-
-
-            <!-- 
-            <p class="smaller-text">*<b>Pay later</b>. Credit cards are only charged when only when we close the campaign. <b>Limited quantities</b> in the first production! Price is EURO <a href="https://www.google.de/search?q=google+currency+139+EUR&oq=google+currency+129" target="_blank">click here</a> to check the price in your currency.</p>
+            <p class="smaller-text">*<b>Pay later</b>. Credit cards are only charged when only when we close the campaign. <b>Limited quantities</b> in the first production! Price is $USD <a href="https://www.google.de/search?q=google+currency+139+USD&oq=google+currency+129" target="_blank">click here</a> to check the price in your currency.</p>
 
             <p class="smaller-text">The price doesn't include taxes, customs or shipping costs.</p>
-            -->
           </div>
         </div>
 
@@ -87,20 +65,24 @@
 
   </section>
 
+
   <!-- features of the products -->
   <section id="features" class="section">
     <div class="split split--reverse">
       <div class="split-inner">
         <div class="split-body">
           <div class="milestone centrum centrum--left">
+            <h4>How does it work</h4>
+            <p>The Avakai twins are connected via the free Avakai app that you can install on your iPhone, iPad or an Android phone.</p>
+
             <h4>What's included</h4>
             <ul>
-              <li>Two Avakai dolls who respond to each other wirelessly</li>
+              <li>Two Avakai dolls</li>
               <li>USB charging cable</li>
-              <li>Play ideas and handling manual</li>
+              <li>Play and handling manual</li>
             </ul>
 
-            <h4>Interactions and expressions</h4>
+            <h4>Interactions</h4>
             <ul>
               <li>Rolling: Laughing - Giggling</li>
               <li>

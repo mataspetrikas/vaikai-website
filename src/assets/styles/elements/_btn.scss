@@ -16,6 +16,7 @@ $btn-gutter: 30px;
 $btn-color: $white;
 $btn-color-active: $btn-color;
 $btn-background: $blue;
+$btn-background-disabled: $gray;
 $btn-background-active: $mid-blue;
 
 $btn-color-cta: $white;
@@ -81,6 +82,21 @@ $btn-adjust-valign: 3px;
   &:hover, &:active &.focus {
     color: $btn-color-active;
     background: $btn-background-active;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+.btn--disabled {
+  color: $btn-color;
+  background: $btn-background-disabled;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  cursor: default;
+
+  &:hover, &:active &.focus {
+    color: $btn-color;
+    background: $btn-background-disabled;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }

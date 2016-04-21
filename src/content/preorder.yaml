@@ -20,3 +20,15 @@ units:
     description: Avakai Twins in natural wood finishing
 tracking:
   facebook: Lead
+form:
+  name: newsletter
+  fields:
+    EMAIL:
+      type: email
+      label: Email address
+      placeholder: Enter your email to sign-up
+  controls:
+  - type: submit
+    label: Yes, sign me up!
+    ui: button
+    icon: send
