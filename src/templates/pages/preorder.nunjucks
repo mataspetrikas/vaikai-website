@@ -28,8 +28,8 @@
           <div class="milestone centrum centrum--left">
             <h3>Avakai twins:<br>
             Less screen time, more play<br>
-            <span class="strikethrough" title="it's approximately $150">€140</span> <span class="bluetext" title="it's approximately $139">€129</span></h3>
-            <p>Avakai are crafted wooden toy twins that enable kids to discover free play and a connected world without screens. Be part of our first production and get a €10 discount.</p>
+            <span class="bluetext" title="it's approximately $149">€139</span></h3>
+            <p>Avakai Twins are alive wooden toys that enable kids to discover free play and a connected world without screens.</p>
             <p>
               <select class="js-select">
                 {% for item in page.units %}
